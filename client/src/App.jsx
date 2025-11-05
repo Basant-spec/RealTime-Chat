@@ -4,7 +4,9 @@ import { io } from "socket.io-client";
 
 function App() {
   const [messages, setmessages] = useState([])
-  const socket = useMemo(()=> io("http://localhost:3000"), [])
+ const socket = useMemo(() => io(import.meta.env.VITE_SOCKET_URL || "http://localhost:3000"), []);
+
+
   const [socketid, setsocketid] = useState("")
   const [reciever, setreciever] = useState("")
   const [room, setroom] = useState("")
