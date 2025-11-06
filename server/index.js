@@ -44,7 +44,7 @@ app.get("/", (req, res) => {
   res.send("Hello World");
 });
 
-// ✅ FIX STARTS HERE
+
 const PORT = process.env.PORT || 10000;
 const HOST = '0.0.0.0';
 
